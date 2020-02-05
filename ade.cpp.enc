@@ -1,0 +1,103 @@
+#include <iostream>
+#include <conio.h>
+
+using namespace std;
+
+void ListMenu(){
+	cout<<"UJIKOM RPL\n";
+	cout<<"1. LI\n";
+	cout<<"2. PP\n";
+	cout<<"3. Exit\n";
+	cout<<"Pilih Menu : ";
+}
+
+//program lingkaran
+//fungsi menghitung keliling lingkaran
+float KL(float r){
+	return 2*3.14*r;
+}
+//fungsi menghitung luas lingkaran
+float LL(float r){
+	return 3.14*r*r;
+}
+//prosedur lingkaran
+void LI(){
+	int pilih;
+	float r;
+	do{
+	system("cls");
+	cout<<"Liangkaran "<<endl;
+	cout<<"Masukan Jari-Jari : ";
+	cin>>r;
+	cout<<"\nKeliling="<<KL(r);
+	cout<<"\nLuas = "<<LL(r);
+	cout<<"\n1:Ulang\n0:Kembali";
+	cout<<"\nMasukan Pilihan : ";
+	cin>>pilih;
+	if(pilih==1){
+		
+	}else if(pilih!=0){
+		cout<<"\nPilih Data Kembali ";
+		getch();
+	}	
+	
+	}while(pilih!=0);
+}
+//akhir program lingkaran
+
+float KP(float p,float l){
+	return 2*p+2*l;
+}
+
+float LP(float p,float l){
+	return p*l;
+}
+
+void PP(){
+int pilih;
+	float p,l;
+	do{
+	system("cls");
+	cout<<"Liangkaran "<<endl;
+	cout<<"Masukan P : ";
+	cin>>p;
+	cout<<"Masukan L : ";
+	cin>>l;
+	cout<<"\nKeliling="<<KP(p,l);
+	cout<<"\nLuas = "<<LP(p,l);
+	cout<<"\n1:Ulang\n0:Kembali";
+	cout<<"\nMasukan Pilihan : ";
+	cin>>pilih;
+	if(pilih==1){
+		
+	}else if(pilih!=0){
+		cout<<"\nPilih Data Kembali ";
+		getch();
+	}	
+	
+	}while(pilih!=0);	
+}
+
+//prosedur menu
+void Menu(){
+	int pilih;
+	do{
+	system("cls");
+	ListMenu();
+	cin>>pilih;
+	if(pilih==1){
+	LI();	
+	}else if(pilih==2){
+    PP();		
+	}else if(pilih!=3){
+	cout<<"Piihan salah : ";
+	getch();
+	}	
+	
+	}while(pilih!=3);
+}
+
+int main(){
+	Menu();
+	getch();
+}
